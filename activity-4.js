@@ -9,7 +9,12 @@ function isAdult(age) {
     return false;
 }
 // Convert to arrow function:
-
+const isAdult = (age) => {
+    if (age >= 18) {
+        return true;
+    }
+    return false;
+};
 
 // Problem 2
 function getGrade(score) {
@@ -24,7 +29,17 @@ function getGrade(score) {
     }
 }
 // Convert to arrow function:
-
+const getGrade = (score) => {
+    if (score >= 90) {
+        return "A";
+    } else if (score >= 80) {
+        return "B";
+    } else if (score >= 70) {
+        return "C";
+    } else {
+        return "F"
+    }
+} ;
 
 // Problem 3
 function calculateTotal(items) {
@@ -35,7 +50,13 @@ function calculateTotal(items) {
     return total;
 }
 // Convert to arrow function:
-
+const calculateTotal = (items) => {
+    let total = 0;
+    for (let i = 0; i < items.length; i++) {
+        total += items[i];
+    }
+    return total;
+}
 
 // Problem 4
 function filterEvenNumbers(numbers) {
