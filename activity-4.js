@@ -65,7 +65,11 @@ function filterEvenNumbers(numbers) {
     });
 }
 // Convert to arrow function (convert both outer and inner functions):
-
+const filterEvenNumbers = (numbers) => {
+    return numbers.filter(let, function1 = (num) => {
+        return num % 2 === 0;
+    });
+};
 
 // Problem 5
 function mapToSquares(arr) {
@@ -74,7 +78,11 @@ function mapToSquares(arr) {
     });
 }
 // Convert to arrow function (convert both outer and inner functions):
-
+const mapToSquares = (arr) => {
+    return arr.map(let, function1 = (x) => {
+        return x * x;
+    });
+}
 
 // Problem 6
 function findLongestWord(words) {
@@ -87,7 +95,15 @@ function findLongestWord(words) {
     return longest;
 }
 // Convert to arrow function (convert both outer and inner functions):
-
+const findLongestWord = (words) => {
+    let longest = "";
+    words.forEach(let, function1 = (word) => {
+        if (word.length > longest.length) {
+            longest = word;
+        }
+    });
+    return longest;
+}
 
 // Problem 7
 function sumArray(numbers) {
@@ -96,14 +112,20 @@ function sumArray(numbers) {
     }, 0);
 }
 // Convert to arrow function (convert both outer and inner functions):
-
+const sumArray = (numbers) => {
+    return numbers.reduce(let, function1 = (acc, num) => {
+        return acc + num;
+    }, 0);
+}
 
 // Problem 8
 function getInitials(firstName, lastName) {
     return firstName.charAt(0).toUpperCase() + lastName.charAt(0).toUpperCase();
 }
 // Convert to arrow function:
-
+const getInitials = (firstName, lastName) => {
+   return firstName.charAt(0).toUpperCase() + lastName.charAt(0).toUpperCase(); 
+}
 
 // Problem 9
 function checkPassword(password) {
@@ -113,7 +135,12 @@ function checkPassword(password) {
     return false;
 }
 // Convert to arrow function:
-
+const checkPassword = (password) => {
+     if (password.length >= 8) {
+        return true;
+    }
+    return false;
+}
 
 // Problem 10
 function formatName(first, middle, last) {
@@ -123,4 +150,9 @@ function formatName(first, middle, last) {
     return first + " " + last;
 }
 // Convert to arrow function:
-
+const formatName = (first, middle, last) => {
+    if (middle) {
+        return first + " " + middle + " " + last;
+    }
+    return first + " " + last;
+}
